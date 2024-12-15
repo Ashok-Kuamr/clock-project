@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div class="clock">
+            <div id="display-mode">
+                <div id="time" class="time">
+                    <span id="hrs">00</span>
+                    <span>:</span>
+                    <span id="min">00</span>
+                    <span>:</span>
+                    <span id="sec">00</span>
+
+                </div>
+                <div id="date" class="date">November 11, 2024</div>
+                <div class="button-container">
+                    <!-- <button id="edit-button" onclick="toggleEditMode()">Edit</button> -->
+                </div>
+            <div id="edit-mode" style="display: none;">
+                <input type="time" id="edit-time" class="input-field">
+                <input type="date" id="edit-date" class="input-field">
+                <div class="button-container">
+                    <button onclick="saveChanges()">Save</button>
+                    <button onclick="toggleEditMode()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="style.js"></script>
+
+    <!-- <script>
+        let hrs = document.getElementById("hrs");
+        let min = document.getElementById("min");
+        let sec = document.getElementById("sec");
+
+        setInterval(()=>{
+
+            let currentTime =  new Date();
+        
+        hrs.innerHTML = currentTime.getHours();
+        min.innerHTML = currentTime.getMinutes();
+        sec.innerHTML = currentTime.getSeconds();
+
+        },1000)
+
+    </script> -->
+
+</body>
+</html>
